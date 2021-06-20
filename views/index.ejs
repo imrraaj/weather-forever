@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Forever</title>
+    <%- include('./style'); %>
+
+</head>
+
+<body>
+    <div id="container">
+        <div class="header">
+            <h1>
+                Weather
+            </h1>
+        </div>
+        <div class="foram">
+            <form action="/search" method="post">
+                <input type="text" name="city" id="city">
+                <button class="btn">send</button>
+            </form>
+        </div>
+        <div class="flex-con">
+            <div class="box1">
+                <img class="unsplash">
+                <div class="city-flex">
+                    <div class="image">
+                        <img src="./weather-forecast-app-3470357-2961167.png" alt="">
+                    </div>
+                    <div class="desc">Description</div>
+                    <!-- <div class="date" id="date">mar19</div> -->
+                    <div class="temperature">T<span><sup>&deg;</sup>C</span></div>
+                    <div class="city-name">
+                        <h1>City</h1>
+                        Country
+                    </div>
+                </div>
+                <div class="weather">
+                    <div class="weather-flex">
+                        <div class="w-img"><img src="./barometer.png" alt=""></div>
+                        <div class="weather1">Pressure</div>
+                        <div class="weather-info">P</div>
+                        <div class="unit">Pascals</div>
+                    </div>
+                    <div class="weather-flex">
+                        <div class="w-img"><img src="./humidity.png" alt=""></div>
+                        <div class="weather1">Humidity</div>
+                        <div class="weather-info">H</div>
+                        <div class="unit">%</div>
+                    </div>
+                    <div class="weather-flex">
+                        <div class="w-img"><img src="./wind.png" alt="123"></div>
+                        <div class="weather1">Wind</div>
+                        <div class="weather-info">W</div>
+                        <div class="unit">kmph</div>
+                    </div>
+                    <div class="weather-flex">
+                        <div class="w-img"><img src="./rain.png" alt=""></div>
+                        <div class="weather1">Visibility</div>
+                        <div class="weather-info">V</div>
+                        <div class="unit"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</body>
+
+</html>
