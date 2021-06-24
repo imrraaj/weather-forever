@@ -11,74 +11,67 @@
 </head>
 
 <body>
-    <div id="container">
-        <div class="header">
-            <h1>
-                Weather Widget
-            </h1>
-        </div>
-        <div class="foram">
-            <form action="/search" method="post">
-                <input type="text" name="city" id="city">
-                <button class="btn">send</button>
-            </form>
-        </div>
-        <div class="flex-con">
-            <div class="box1">
-                <img class="unsplash">
-                <div class="city-flex">
-                    <div class="image">
-                        <img src=<%= image %> >
+    <div class="container">
+        <div class="box1">
+            <div class="serach">
+                <form action="/search" method="post">
+                    <input type="text" name="city" id="city">
+                    <button class="btn">search</button>
+                </form>
+            </div>
+            <div class="city_flex">
+                <div id="city-name">
+                    <div class="cityname heading">
+                        <%= cityname %>
                     </div>
-                    <div class="desc"><%= weather %></div>
-                    <div class="date" id="date"></div>
-                    <div class="temperature"><%= temp %><span><sup>&deg;</sup>C</span></div>
-                    <div class="city-name">
-                        <h1><%= cityname %></h1>
+                    <div class="countyname sub-heading">
                         <%= country %>
                     </div>
                 </div>
-                <div class="weather">
-                    <div class="weather-flex">
-                        <div class="w-img"><img src="./barometer.png" alt=""></div>
-                        <div class="weather1">Pressure</div>
-                        <div class="weather-info"><%= pressure %></div>
-                        <div class="unit">Pascals</div>
+                <div class="temperaure heading blue">
+                    <%= temp %> <sup>o</sup>C
+                        <div class="desc">
+                            <%= weather %>
+                        </div>
+                </div>
+            </div>
+            <div class="info-main">
+                <div class="info">
+                    <div class="info-icon"><img src="./barometer.png" alt=""></div>
+                    <div class="info-heading text blue">Pressure</div>
+                    <div class="info-value text">
+                        <%= pressure %>
                     </div>
-                    <div class="weather-flex">
-                        <div class="w-img"><img src="./humidity.png" alt=""></div>
-                        <div class="weather1">Humidity</div>
-                        <div class="weather-info"><%= humidity %></5></div>
-                        <div class="unit">%</div>
+                    <div class="unit">Pascal</div>
+                </div>
+                <div class="info">
+                    <div class="info-icon"><img src="./humidity.png" alt=""></div>
+                    <div class="info-heading text blue">Humidity</div>
+                    <div class="info-value text">
+                        <%= humidity %>
                     </div>
-                    <div class="weather-flex">
-                        <div class="w-img"><img src="./wind.png" alt="123"></div>
-                        <div class="weather1">Wind</div>
-                        <div class="weather-info"><%= wind %></div>
-                        <div class="unit">kmph</div>
+                    <div class="unit">%</div>
+                </div>
+                <div class="info">
+                    <div class="info-icon"><img src="./wind.png" alt=""></div>
+                    <div class="info-heading text blue">Wind</div>
+                    <div class="info-value text">
+                        <%= wind %>
                     </div>
-                    <div class="weather-flex">
-                        <div class="w-img"><img src="./rain.png" alt=""></div>
-                        <div class="weather1">Visibility</div>
-                        <div class="weather-info"><%= visibility %></div>
-                        <div class="unit"></div>
+                    <div class="unit">kmph</div>
+                </div>
+                <div class="info">
+                    <div class="info-icon"><img src="./rain.png" alt=""></div>
+                    <div class="info-heading text blue">Visibility</div>
+                    <div class="info-value text">
+                        <%= visibility %>
                     </div>
+                    <div class="unit">&nbsp;</div>
+
                 </div>
             </div>
         </div>
-
-
     </div>
-    </div>
-    <script>
-        let today = new Date();
-        let month = today.getMonth();
-        console.log(month);
-        let date = today.getDate();
-        console.log(date)
-        var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-        document.getElementById('date').innerText = months[month] + " " + date;
-
-    </script>
 </body>
+
 </html>
